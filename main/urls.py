@@ -23,10 +23,12 @@ urlpatterns = [
     path('payments/<int:pk>/', PaymentRetrieveAPIView.as_view(), name='payment-detail'),
     path('airplanes/<int:pk>/', AirplaneRetrieveAPIView.as_view(), name='airplane-detail'),
     path('ticket_payments/<int:ticket_id>/', TicketPaymentsByTicketAPIView.as_view(), name='ticket-payment-list'),
+    
     path('tickets/', TicketCreateAPIView.as_view(), name='ticket-create'),
     path('clients/', ClientCreateAPIView.as_view(), name='client-create'),
     path('payments/', PaymentCreateAPIView.as_view(), name='payment-create'),
     path('ticket_payments/', TicketPaymentCreateAPIView.as_view(), name='ticket-payment-create'),
+
     path('countries/', CountryListAPIView.as_view(), name='country-list'),
     path('voyages/', VoyageListAPIView.as_view(), name='voyage-list'),
     path('cities/', CityListAPIView.as_view(), name='city-list'),
